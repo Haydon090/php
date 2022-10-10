@@ -1,9 +1,9 @@
 <?php
 function SumtTimes(string $str1, string $str2):string
 {
-    $time1 = array(10);
-    $time2 = array(10);
-    $result = array(20);
+    $time1 = [];
+    $time2 = [];
+    $result = [];
 
     $time1 = explode(':', $str1);
     $time2 = explode(':', $str2);
