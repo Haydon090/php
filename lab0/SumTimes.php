@@ -1,5 +1,5 @@
 <?php
-function SumtTimes(string $str1, string $str2): string
+function SumtTimes(string $str1, string $str2):string
 {
     $time1 = array(10);
     $time2 = array(10);
