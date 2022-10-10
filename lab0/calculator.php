@@ -1,7 +1,7 @@
 <?php
   function calculator(string $str) : string{
-    $operations = array(10);
-    $numbers = array(10);
+    $operations = [];
+    $numbers = [];
     
 
     for($i = 0; $i < strlen($str); $i++){
@@ -10,12 +10,10 @@
         
       }
     }
-    if(count($operations) > 4 ){
-      return 'Ошибка ввода';
-    }
-    $correctInput = '0123456789+-';
+    
+    $error = '0123456789+-';
     for($i = 0; $i < strlen($str); $i++){
-      if(!strpos($correctInput, $str[$i])){
+      if(!strpos($error, $str[$i])){
         return 'Ошибка ввода';
       }
     }
@@ -24,6 +22,7 @@
     $numberOfOperations = 0;
     $temp = '';
     $sum = 0;
+    
     foreach($numbers as $num){
       $minusPos = strpos($num, '-');
       if($minusPos){
