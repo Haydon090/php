@@ -5,18 +5,20 @@ function calculator(string $str): string
     $numbers = [];
 
 
-    for ($i = 0; $i < strlen($str); $i++)
-    {
+    for ($i = 0; $i < strlen($str); $i++) {
         if ($str[$i] === '+' || $str[$i] === '-') {
             $operations[$i] = $str[$i];
         }
     }
-
+    if (count($operations) > 4) {
+        return 'Ошибка ввода';
+    }
     $error = '0123456789+-';
-    for ($i = 0; $i < strlen($str); $i++) 
-    {
-        if (!strpos($error, $str[$i])) {
-            return 'Ошибка ввода';
+    for ($i = 0; $i < strlen($str); $i++) {
+        for ($j = 0; $j < strlen($error); $j++) {
+            if (strpos($error[$j], $str[$i])) {
+                return 'Ошибка ввода';
+            }
         }
     }
 
@@ -46,4 +48,7 @@ function calculator(string $str): string
     }
     return $sum;
 }
-echo calculator('1+4-3');
+
+if ($argv[1] !== null) {
+    echo calculator($argv[1]);
+}
