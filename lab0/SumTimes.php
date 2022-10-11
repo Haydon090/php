@@ -1,5 +1,5 @@
 <?php
-function SumtTimes(string $str1, string $str2):string
+function sumtTimes(string $str1, string $str2): string
 {
     $time1 = [];
     $time2 = [];
@@ -8,34 +8,47 @@ function SumtTimes(string $str1, string $str2):string
     $time1 = explode(':', $str1);
     $time2 = explode(':', $str2);
 
-    for ($i = 0; $i < count($time1); $i++) {
+    $result[2] = $time1[2] + $time2[2];
+    $result[1] = $time1[1] + $time2[1];
+    $result[0] = $time1[0] + $time2[0];
 
-        $result[$i] = $time1[$i] + $time2[$i];
+    //часы
+    if ($result[0] > 24) {
+        while ($result[0] > 24) {
+
+            $result[0] = $result[0] - 24;
+        }
+    }
+    if ($result[0] === 24) {
+        $result[0] = 0;
     }
 
-    if ($result[2] >= 60) {
-        $temp = 60 - $time1[2];
-        $temp = $time2[2] - $temp;
-        $result[2] = $temp;
-        $result[1]++;
+    //минуты
+    if ($result[1] > 60) {
+        while ($result[1] > 60) {
+            $result[1] = $result[1] - 60;
+            $result[0]++;
+        }
     }
-
-    if ($result[1] >= 60) {
-        $temp = 60 - $time1[1];
-        $temp = $time2[1] - $temp;
-        $result[1] = $temp;
+    if ($result[1] === 60) {
+        $result[1] = 0;
         $result[0]++;
     }
-
-    if ($result[0] >= 24) {
-        $temp =  24 - $time1[0];
-        $temp = $time2[0] - $temp;
-        $result[0] = $temp;
+    //секунды
+    if ($result[2] === 60) {
+        $result[2] = 0;
+        $result[1] = $result[1] + 1;
+    }
+    if ($result[2] > 60) {
+        while ($result[2] > 60) {
+            $result[2] = $result[2] - 60;
+            $result[1]++;
+        }
     }
 
     return $result[0] . ':' . $result[1] . ':' . $result[2];
 }
 
-$str1 = '20:20:50';
-$str2 = '10:20:30';
-echo SumtTimes($str1, $str2);
+$str1 = '50:50:50';
+$str2 = '50:50:50';
+echo sumtTimes($str1, $str2);

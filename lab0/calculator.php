@@ -4,7 +4,6 @@ function calculator(string $str): string
     $operations = [];
     $numbers = [];
 
-
     for ($i = 0; $i < strlen($str); $i++) {
         if ($str[$i] === '+' || $str[$i] === '-') {
             $operations[$i] = $str[$i];
@@ -49,6 +48,7 @@ function calculator(string $str): string
     return $sum;
 }
 
-if ($argv[1] !== null) {
+if ($argv[1] !== null)
+{
     echo calculator($argv[1]);
 }
