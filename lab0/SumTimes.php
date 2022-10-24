@@ -51,4 +51,5 @@ function sumtTimes(string $str1, string $str2): string
 
 $str1 = '50:50:50';
 $str2 = '50:50:50';
+
 echo sumtTimes($str1, $str2);
