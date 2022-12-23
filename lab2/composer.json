@@ -1,0 +1,21 @@
+{
+    "name": "vovan/chocolatefactory",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Vovan\\Chocolatefactory\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Haydon090"
+        }
+    ],
+    "repositories": [ 
+        {
+            "type": "vcs",
+            "url": "https://github.com/Haydon090/ChocolateFactctory.git'"
+        }
+    ],
+    "require": {}
+}

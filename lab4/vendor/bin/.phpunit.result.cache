@@ -1,0 +1,1 @@
+{"version":1,"defects":{"dateTest::testFormat":4,"dateTest::testMinusDay":3,"dateTest::testGetDayOfWeek":3},"times":{"dateTest::testFormat":0.009,"dateTest::testDiffday":0,"dateTest::testMinusDay":0,"dateTest::testGetDayOfWeek":0,"dateTest::testConstruct":0.003}}

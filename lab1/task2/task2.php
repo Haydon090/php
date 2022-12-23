@@ -2,7 +2,7 @@
 // Работу выполнил студент группы П-31
 // Поликарпов Владимир
 require_once('Date.php');
-$date1 = new Date(10, 10, 2022);
+$date1 = new Date(10, 6, 2000);
 $date2 = new Date(30, 12, 2000);
 echo $date1->format('ru') . PHP_EOL; //13.12.2022
 echo $date2->format('en') . PHP_EOL; //2022-12-31

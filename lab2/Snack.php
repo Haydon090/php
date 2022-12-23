@@ -9,8 +9,7 @@ class Snack
     $this->name = $name;
     $this->$chocolate = $chocolate;
     $this->toppings = $toppings;
-  }
-  public function prepare():self
+  }  public function prepare():self
   {
     $toppingsString = '';
     foreach ($this->toppings as $topping) {
@@ -23,7 +22,7 @@ class Snack
   }
   public function cut(): self
     {
-        print('Данную пиццу нарезают по вертикали.');
+        print('Данный Snack нарезают по вертикали.');
         return $this;
     }
 }
