@@ -1,4 +1,4 @@
-<?php
+ <?php
 function sumtTimes(string $str1, string $str2): string
 {
     $time1 = [];

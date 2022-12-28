@@ -1,4 +1,4 @@
-<?php
+ <?php
 require_once 'WrongLoginException.php';
 require_once 'WrongPasswordException.php';
 

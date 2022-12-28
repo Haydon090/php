@@ -1,4 +1,4 @@
-<?php
+ <?php
 class Date
 {
     private int $day;
